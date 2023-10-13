@@ -3,17 +3,15 @@ function Point(x, y, parent = undefined) {
 }
 
 function Knight(origin, destination) {
-  const listPath = [];
   return {
     origin,
     destination,
-    listPath,
   };
 }
 
 function GameBoard(height = 8, width = 8) {
-  const queue = [];
   let lastPoint;
+  const queue = [];
   const bounds = { xmin: 0, xmax: width - 1, ymin: 0, ymax: height - 1 };
 
   function updateLastPoint(point) {
